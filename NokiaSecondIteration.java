@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NokiaFirstIteration {
+public class NokiaSecondIteration {
 
     public static void main(String [] args){
 
@@ -27,17 +27,20 @@ public class NokiaFirstIteration {
         13. Profiles
         14. Services
         15. SIM services2
+        0. Turn Off
 
 
     """;
+    while (true) {
     System.out.println(prompt);
     int userPrompt = input.nextInt();
-
     
     switch (userPrompt) {
-        
+                case 0 -> {
+                    break;
+                }       
                 case 1 -> {System.out.println("Phone book");
-
+                while (true) {
             String phoneBook = """
                 
 Select
@@ -53,6 +56,7 @@ Select
 9. Options
 10. Speed dials
 11. Voice tags
+0. Back
 
     
             """;
@@ -60,6 +64,9 @@ Select
                 int phoneBookPrompt = input.nextInt();
             
             switch (phoneBookPrompt) {
+                case 0 -> {
+                    break;
+                }
                 case 1 -> System.out.println("Search");
                 case 2 -> System.out.println("Service Nos. 1");
                 case 3 -> System.out.println("Add name");
@@ -77,29 +84,50 @@ Select
 1. Memory in use
 2. Type of view
 3. Memory status
+0. Back
 
                 """;
-
+                while (true) {
                 System.out.println(options);
                 int optionsPrompt = input.nextInt();
             switch (optionsPrompt) {
+                case 0 -> {
+                    break;
+                }
                 case 1 -> System.out.println("Memory in use");
                 case 2 -> System.out.println("Type of view");
                 case 3 -> System.out.println("Memory status");
                 default -> System.out.println("Invalid Input");
 
-}
 
+}
+                if (optionsPrompt == 0) {
+                break;
+            }
+}
 }
                 case 10 -> System.out.println("Speed dials");
                 case 11 -> System.out.println("Voice tags");
+
                 default -> System.out.println("Invalid Input");
-        }
 
 
+             
+    
+
+        
+}
+
+            if (phoneBookPrompt == 0) {
+                break;
+            }
+
         }
+}
+
+        
         case 2 -> {System.out.println("Messages");
-
+        while (true) {
             String messages = """
             
 Select
@@ -114,13 +142,17 @@ Select
 8. Info service
 9. Voice mailbox number 4
 10. Service command editor
+0. Back
 
         """;
+
             System.out.println(messages);
         int messagesPrompt = input.nextInt();
   
         switch (messagesPrompt){    
-    
+            case 0 -> {
+                break;
+            }            
             case 1 -> System.out.println("Write messages");
             case 2 -> System.out.println("Inbox");
             case 3 -> System.out.println("Outbox");
@@ -129,16 +161,21 @@ Select
             case 6 -> System.out.println("Smileys");
             case 7 -> {System.out.println("Message settings");
             String messageSettings = """
+Select
+1. Set 1 2
+2. Common 3 
+0. Back
 
-            Select
-            1. Set 1 2
-            2. Common 3
 """;
+
+            while (true) {
             System.out.println(messageSettings);
             int messageSettingsPrompt = input.nextInt();
 
             switch (messageSettingsPrompt) {
-
+            case 0 -> {
+                break;
+            }  
             case 1 -> {System.out.println("Set 1 2");
 
                 String set = """
@@ -148,19 +185,26 @@ Select
 1. Message centre number
 2. Messages sent as
 3. Message validity
+0. Back
             
 """;    
+                while (true) {
                 System.out.println(set);
                 int setPrompt = input.nextInt();
 
                 switch(setPrompt) {
-
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Message centre number");
                 case 2 -> System.out.println("Messages sent as");
                 case 3 -> System.out.println("Message validity");
                 default -> System.out.println("Invalid Input");
 }
-
+                if (setPrompt == 0) {
+                break;
+            }
+}
 }
             case 2 -> {System.out.println("Common 3");
 
@@ -171,28 +215,42 @@ Select
 1. Delivery reports
 2. Reply via same centre
 3. Character support
+0. Back
 
 """;
+                while (true) {
                 System.out.println(common);
                 int commonPrompt = input.nextInt();
 
                 switch (commonPrompt) {
-
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Delivery reports");
                 case 2 -> System.out.println("Reply via same centre");
                 case 3 -> System.out.println("Character support");
                 default -> System.out.println("Invalid Input");
 }
-
+            if (commonPrompt == 0) {
+                            break;
+                        }
+}
 }               
 
 }
-
+            if (messageSettingsPrompt == 0) {
+                            break;
+                        }
+}
 }
             case 8 -> System.out.println("Info service");
             case 9 -> System.out.println("Voice mailbox number 4");
             case 10 -> System.out.println("Service command editor");
             default -> System.out.println("Invalid Input");
+}
+                if (messagesPrompt == 0) {
+                        break; 
+                    }
 }
 }
         case 3 -> System.out.println("Chat");
@@ -209,13 +267,18 @@ Select
 6. Show call costs
 7. Call cost settings
 8. Prepaid credit
-
+0. Back
 
 """;
+
+            while (true) {
             System.out.println(callRegister);
             int callRegisterPrompt = input.nextInt();
             
             switch (callRegisterPrompt) {
+            case 0 -> {
+                break;
+            } 
             case 1 -> System.out.println("Missed calls");
             case 2 -> System.out.println("Received calls");
             case 3 -> System.out.println("Dialled numbers");
@@ -231,13 +294,18 @@ Select
 3. Received calls’ duration
 4. Dialled calls’ duration
 5. Clear timers
+0. Back
 
 """;
 
+                while (true) {
                 System.out.println(showCallDuration);
                 int showCallDurationPrompt = input.nextInt();
 
                 switch(showCallDurationPrompt) {
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Last call duration");
                 case 2 -> System.out.println("All calls’ duration");
                 case 3 -> System.out.println("Received calls’ duration");
@@ -247,7 +315,10 @@ Select
 
 
 
-
+}
+            if (showCallDurationPrompt == 0) {
+                            break;
+                        }
 }
 }
             case 6 -> {System.out.println("Show call costs");
@@ -259,20 +330,27 @@ Select
 1. Last call cost
 2. All calls’ cost
 3. Clear counters
-
+0. Back
 
 """;
+
+            while (true) {
             System.out.println(showCallCosts);
             int showCallCostsPrompt = input.nextInt();
                 switch (showCallCostsPrompt) {
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Last call cost");
                 case 2 -> System.out.println("All calls’ cost");
                 case 3 -> System.out.println("Clear counters"); 
                 default -> System.out.println("Invalid Input");
 
 }
-
-
+            if (showCallCostsPrompt == 0) {
+                            break;
+                        }
+}
 }
             case 7 -> {System.out.println("Call cost settings");
 
@@ -282,24 +360,34 @@ Select
 
 1. Call cost limit
 2. Show costs in
-                
+0. Back                
 
 """;
+
+                while (true) {
                 System.out.println(callCostSettings);
                 int callCostSettingsPrompt = input.nextInt();
 
                 switch (callCostSettingsPrompt) {
-
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Call cost limit");
                 case 2 -> System.out.println("Show costs in");
                 default -> System.out.println("Invalid Input");
 }
-
+            if (callCostSettingsPrompt == 0) {
+                            break;
+                        }
+}
 }
             case 8 -> System.out.println("Prepaid credit");
             default -> System.out.println("Invalid Input");
 }
-
+            if (callRegisterPrompt == 0) {
+                            break;
+                        }
+}
 }
         case 5 -> {System.out.println("Tones");
 
@@ -315,12 +403,18 @@ Select
 6. Warning tones
 7. Vibrating alert
 8. Screen saver
+0. Back
 
 """;
+
+            while (true) {
             System.out.println(tones);
             int tonesPrompt = input.nextInt();
 
             switch (tonesPrompt) {
+            case 0 -> {
+                break;
+            } 
             case 1 -> System.out.println("Ringing tone");
             case 2 -> System.out.println("Ringing volume");
             case 3 -> System.out.println("Incoming call alert");
@@ -331,8 +425,10 @@ Select
             case 8 -> System.out.println("Screen saver");
             default -> System.out.println("Invalid Input");
 }
-
-
+            if (tonesPrompt == 0) {
+                            break;
+                        }
+}
 }
         case 6 -> {System.out.println("Settings");
 
@@ -344,10 +440,17 @@ Select
 2. Phone settings
 3. Security settings
 4. Restore factory settings
+0. Back
+
 """;
+
+            while (true) {
             System.out.println(settings);
             int settingsPrompt = input.nextInt();
             switch (settingsPrompt) {
+            case 0 -> {
+                break;
+            } 
             case 1 -> {System.out.println("Call settings");
                 String callSettings = """
 
@@ -359,11 +462,17 @@ Select
 4. Own number sending
 5. Phone line in use
 6. Automatic answer 1
+0. Back
 
 """;
+
+                while (true) {
                 System.out.println(callSettings);
                 int callSettingsPrompt = input.nextInt();
                 switch (callSettingsPrompt) {
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Automatic redial");
                 case 2 -> System.out.println("Speed dialling");
                 case 3 -> System.out.println("Call waiting options");
@@ -372,7 +481,12 @@ Select
                 case 6 -> System.out.println("Automatic answer 1");
                 default -> System.out.println("Invalid Input");
 }
+            if (callSettingsPrompt == 0) {
+                            break;
+                        }
 }
+}
+
             case 2 -> {System.out.println("Phone settings");
                 String phoneSettings = """
 
@@ -383,11 +497,17 @@ Select
 3. Welcome note
 4. Network selection
 5. Confirm SIM service actions
+0. Back
 
 """;
+
+                while (true) {
                 System.out.println(phoneSettings);
                 int phoneSettingsPrompt = input.nextInt();
                 switch (phoneSettingsPrompt) {
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("Language");
                 case 2 -> System.out.println("Cell info display");
                 case 3 -> System.out.println("Welcome note");
@@ -396,7 +516,12 @@ Select
                 default -> System.out.println("Invalid Input");
 
 }
+            if (phoneSettingsPrompt == 0) {
+                            break;
+                        }
 }
+}
+
             case 3 -> {System.out.println("Security settings");
 
                 String securitySettings = """
@@ -409,11 +534,17 @@ Select
 4. Closed user group
 5. Security level
 6. Change access codes
+0. Back
 
 """;
+
+                while (true) {
                 System.out.println(securitySettings);
                 int securitySettingsPrompt = input.nextInt();
                 switch (securitySettingsPrompt) {
+                case 0 -> {
+                    break;
+                } 
                 case 1 -> System.out.println("PIN code request");
                 case 2 -> System.out.println("Call barring service");
                 case 3 -> System.out.println("Fixed dialling");
@@ -422,12 +553,19 @@ Select
                 case 6 -> System.out.println("Change access codes");
                 default -> System.out.println("Invalid Input");
 }
-
+            if (securitySettingsPrompt == 0) {
+                            break;
+                        }
+}
 }
             case 4 -> System.out.println("Restore factory settings");
             default -> System.out.println("Invalid Input");
 
 
+}
+            if (settingsPrompt == 0) {
+                            break;
+                        }
 }
 }
         case 7 -> System.out.println("Call divert 1");
@@ -440,11 +578,17 @@ Select
 2. Radio
 3. Recorder
 4. Track list
+0. Back
 
 """;
+
+                while (true) {
                 System.out.println(music);
                 int musicPrompt = input.nextInt();
                 switch (musicPrompt) {
+                case 0 -> {
+                    break;
+                }       
                 case 1 -> System.out.println("Music player");
                 case 2 -> System.out.println(" Radio");
                 case 3 -> System.out.println("Recorder");
@@ -453,7 +597,11 @@ Select
 
 }
 
+            if (musicPrompt == 0) {
+                            break;
+                        }
 
+}
 }
         case 9 -> System.out.println("Games");
         case 10 -> System.out.println("Calculator");
@@ -469,11 +617,17 @@ Select
 4. Stopwatch
 5. Countdown timer
 6. Auto update of date and time
+0. Back
 
 """;
+
+                while (true) {
                 System.out.println(clock);
                 int clockPrompt = input.nextInt();
                 switch (clockPrompt) {
+                case 0 -> {
+                    break;
+                }   
                 case 1 -> System.out.println("Alarm clock");
                 case 2 -> System.out.println("Clock settings");
                 case 3 -> System.out.println("Date setting");
@@ -483,8 +637,10 @@ Select
                 default -> System.out.println("Invalid Input");
 
 }
-
-
+            if (clockPrompt == 0) {
+                            break;
+                        }
+}
 }
         case 13 -> System.out.println("Profiles");
         case 14 -> System.out.println("Services");
@@ -492,7 +648,10 @@ Select
         default -> System.out.println("Invalid Input");
 
 }
-
+            if (userPrompt == 0) {
+                            break;
+                        }
+}
 }
 
 }
